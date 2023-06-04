@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+
+    <body>
+        <%- include("../partials/nav.ejs") %>
+
+            <div class="create-blog content">
+                <form action="/services" method="POST">
+                    <label for="title">Service title:</label>
+                    <input type="text" id="title" name="title" required>
+                    <button>Submit</button>
+                </form>
+            </div>
+
+            <%- include("../partials/footer.ejs") %>
+    </body>
+
+</html>

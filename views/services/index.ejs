@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <div class="blogs content">
+        <h2>All services</h2>
+        <% if (projects.length > 0) { %>
+            <% projects.forEach(blog => {  %>
+                <a class="single" href="<%= blog.link %>">
+                    <h3 class="title"><%= blog.title %></h3>
+                    <p class="snippet"><%= blog.snippet %></p>
+                </a>
+            <% }) %>
+        <% } else { %>
+            <p>There are no projects to display...</p>
+        <% } %>
+    </div>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>
